@@ -1,0 +1,13 @@
+
+работа с бд
+
+mysql -uroot -p
+CREATE USER 'bloguser'@'%' IDENTIFIED BY 'blog';
+
+
+CREATE DATABASE blog_db;
+USE blog_db;
+
+GRANT ALL ON blog_db.* TO 'bloguser'@'%';
+SELECT name from country LIMIT 1;
+
