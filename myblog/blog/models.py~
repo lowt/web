@@ -15,15 +15,13 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-	post=models.ForeignKey(Post)
-	author=models.CharField(max_length=32)
-	text=models.TextField(max_length=100)
+      post=models.ForeignKey(Post)
+      author=models.CharField(max_length=32)
+      text=models.TextField(max_length=100)
+        
+      def __unicode__(self):
+          return self.author
 
+      def get_absolute_url(self):
+          return "/blog/%i/" % self.id
 
- 
-   # def __unicode__(self):
-    #    return self.text
-
-
-
-    
