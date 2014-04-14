@@ -15,5 +15,8 @@ url(r'^edit/(?P<pk>\d+)$', views.PostUpdate.as_view(), name='post_edit'),
 
 url(r'^delete/(?P<pk>\d+)$', views.PostDelete.as_view(), name='post_delete'),
 
+url(r'^comments/', include('django.contrib.comments.urls')),   #???
+
+
 )
 
